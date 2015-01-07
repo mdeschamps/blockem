@@ -15,17 +15,29 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         let logInButton = TWTRLogInButton(logInCompletion: {
             (session: TWTRSession!, error: NSError!) in
-            // play with Twitter session
+            self.showFriendsViewController()
         })
         logInButton.center = self.view.center
         self.view.addSubview(logInButton)
     }
 
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
+        super.viewWillDisappear(animated)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func showFriendsViewController() {
+        self.performSegueWithIdentifier("ShowFriendsSegue", sender: self)
+    }
 
     /*
     // MARK: - Navigation

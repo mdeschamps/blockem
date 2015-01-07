@@ -16,6 +16,8 @@
 		6C509CC01A5CCB2D0030738B /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6C509CBD1A5CCB2D0030738B /* TwitterKitResources.bundle */; };
 		6C509CC11A5CCB2D0030738B /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C509CBE1A5CCB2D0030738B /* Fabric.framework */; };
 		6C509CC31A5CCB7B0030738B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C509CC21A5CCB7B0030738B /* LoginViewController.swift */; };
+		6C509CC71A5CD3350030738B /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C509CC61A5CD3350030738B /* FriendsViewController.swift */; };
+		6C509CCB1A5D0CAF0030738B /* UsersSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C509CCA1A5D0CAF0030738B /* UsersSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		6C509CBD1A5CCB2D0030738B /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		6C509CBE1A5CCB2D0030738B /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		6C509CC21A5CCB7B0030738B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6C509CC61A5CD3350030738B /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		6C509CCA1A5D0CAF0030738B /* UsersSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersSearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +92,10 @@
 		6C509C981A5CCB030030738B /* blockem */ = {
 			isa = PBXGroup;
 			children = (
+				6C509CCA1A5D0CAF0030738B /* UsersSearch.swift */,
 				6C509C9B1A5CCB030030738B /* AppDelegate.swift */,
 				6C509CC21A5CCB7B0030738B /* LoginViewController.swift */,
+				6C509CC61A5CD3350030738B /* FriendsViewController.swift */,
 				6C509C9F1A5CCB030030738B /* Main.storyboard */,
 				6C509CA21A5CCB030030738B /* Images.xcassets */,
 				6C509CA41A5CCB030030738B /* LaunchScreen.xib */,
@@ -241,7 +247,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C509CCB1A5D0CAF0030738B /* UsersSearch.swift in Sources */,
 				6C509CC31A5CCB7B0030738B /* LoginViewController.swift in Sources */,
+				6C509CC71A5CD3350030738B /* FriendsViewController.swift in Sources */,
 				6C509C9C1A5CCB030030738B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

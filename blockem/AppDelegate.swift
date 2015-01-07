@@ -19,8 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Fabric.with([Twitter()])
 
+        if Twitter.sharedInstance().session() != nil {
+           showFriendsViewController()
+        }
+        
         // Override point for customization after application launch.
         return true
+    }
+    
+    func showFriendsViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainNavController: UIViewController! = storyboard.instantiateViewControllerWithIdentifier("MainNavController") as UIViewController
+        self.window?.rootViewController = mainNavController
     }
 
     func applicationWillResignActive(application: UIApplication) {
