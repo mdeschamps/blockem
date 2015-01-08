@@ -17,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        Fabric.with([Twitter()])
+        Twitter.sharedInstance().startWithConsumerKey("IQKbtAYlXLripLGPWd0HUA",
+            consumerSecret: "GgDYlkSvaPxGxC4X8liwpUoqKwwr3lCADbz8A7ADU")
+        Fabric.with([Twitter.sharedInstance()])
 
         if Twitter.sharedInstance().session() != nil {
            showFriendsViewController()
