@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:blockem.xcodeproj">
+      location = "self:BotTerminator.xcodeproj">
    </FileRef>
 </Workspace>

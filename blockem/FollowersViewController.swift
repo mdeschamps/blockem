@@ -11,9 +11,8 @@ import TwitterKit
 
 class FollowersViewController: UsersViewController {
     
-    var user: TWTRUser!
-    var rawUser: NSDictionary!
-    var friends: [TWTRUser]!
+    var user: TWTRExtendedUser!
+    var friends: [TWTRExtendedUser]!
     
     override func viewDidLoad() {
         self.viewLabel = "Followers"
@@ -24,6 +23,14 @@ class FollowersViewController: UsersViewController {
         initViewController()
         
         self.loadFollowers()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let filtersView = segue.destinationViewController as? FiltersViewController {
+            filtersView.user = self.user
+            filtersView.friends = self.friends
+            filtersView.followers = self.users
+        }
     }
     
     internal func loadFollowers() {
@@ -39,7 +46,7 @@ class FollowersViewController: UsersViewController {
             progress: { usersLoaded in
                 self.viewTitle = "Loading followers..."
                 
-                let followersCount = self.rawUser["followers_count"] as Float
+                let followersCount = Float(self.user.followersCount)
                 self.setProgress(followersCount, total: Float(usersLoaded))
             },
             completion: { usersResult in

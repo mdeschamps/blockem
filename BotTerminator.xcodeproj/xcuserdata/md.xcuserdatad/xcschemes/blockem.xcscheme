@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6C509C951A5CCB030030738B"
-               BuildableName = "blockem.app"
-               BlueprintName = "blockem"
-               ReferencedContainer = "container:blockem.xcodeproj">
+               BuildableName = "BotTerminator.app"
+               BlueprintName = "BotTerminator"
+               ReferencedContainer = "container:BotTerminator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6C509CAA1A5CCB030030738B"
-               BuildableName = "blockemTests.xctest"
-               BlueprintName = "blockemTests"
-               ReferencedContainer = "container:blockem.xcodeproj">
+               BuildableName = "BotTerminatorTests.xctest"
+               BlueprintName = "BotTerminatorTests"
+               ReferencedContainer = "container:BotTerminator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6C509CAA1A5CCB030030738B"
-               BuildableName = "blockemTests.xctest"
-               BlueprintName = "blockemTests"
-               ReferencedContainer = "container:blockem.xcodeproj">
+               BuildableName = "BotTerminatorTests.xctest"
+               BlueprintName = "BotTerminatorTests"
+               ReferencedContainer = "container:BotTerminator.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6C509C951A5CCB030030738B"
-            BuildableName = "blockem.app"
-            BlueprintName = "blockem"
-            ReferencedContainer = "container:blockem.xcodeproj">
+            BuildableName = "BotTerminator.app"
+            BlueprintName = "BotTerminator"
+            ReferencedContainer = "container:BotTerminator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6C509C951A5CCB030030738B"
-            BuildableName = "blockem.app"
-            BlueprintName = "blockem"
-            ReferencedContainer = "container:blockem.xcodeproj">
+            BuildableName = "BotTerminator.app"
+            BlueprintName = "BotTerminator"
+            ReferencedContainer = "container:BotTerminator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6C509C951A5CCB030030738B"
-            BuildableName = "blockem.app"
-            BlueprintName = "blockem"
-            ReferencedContainer = "container:blockem.xcodeproj">
+            BuildableName = "BotTerminator.app"
+            BlueprintName = "BotTerminator"
+            ReferencedContainer = "container:BotTerminator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

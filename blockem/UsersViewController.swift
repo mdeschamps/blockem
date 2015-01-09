@@ -9,15 +9,25 @@
 import UIKit
 import TwitterKit
 
+
+class UIThickProgressView: UIProgressView {
+    override func sizeThatFits(size: CGSize) -> CGSize {
+        var newSize: CGSize = CGSize(width: self.frame.size.width, height: 5);
+        return newSize;
+    }
+}
+
 class UsersViewController: UITableViewController {
     
-    var users: [TWTRUser] = [] {
+    var users: [TWTRExtendedUser] = [] {
         didSet {
             tableView.reloadData()
             viewTitle = viewLabel + ": " + String(users.count)
             
             progressBar.hidden = true
-            navigationItem.rightBarButtonItems?.append(nextButton)
+            if nextButton != nil {
+                navigationItem.rightBarButtonItems?.append(nextButton)
+            }
         }
     }
     
@@ -84,6 +94,11 @@ class UsersViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let user = self.users[indexPath.row]
-        return self.tableView.estimatedRowHeight
+        
+        if user.reasons.isEmpty{
+            return self.tableView.estimatedRowHeight
+        } else {
+            return 110
+        }
     }
 }

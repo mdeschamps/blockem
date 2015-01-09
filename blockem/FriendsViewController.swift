@@ -11,8 +11,7 @@ import TwitterKit
 
 class FriendsViewController: UsersViewController {
 
-    var user: TWTRUser!
-    var rawUser: NSDictionary!
+    var user: TWTRExtendedUser!
         
     override func viewDidLoad() {
         self.viewLabel = "Friends"
@@ -29,16 +28,14 @@ class FriendsViewController: UsersViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let followersView = segue.destinationViewController as? FollowersViewController {
             followersView.user = self.user
-            followersView.rawUser = self.rawUser
             followersView.friends = self.users
         }
     }
     
     internal func verifyCredentails() {
-        Twitter.sharedInstance().APIClient.verifyCredentials() { user, rawUser in
+        Twitter.sharedInstance().APIClient.verifyCredentials() { user in
             // save values
-            self.user = user
-            self.rawUser = rawUser
+            self.user = user as TWTRExtendedUser
             
             // fire Request
             self.loadFriends()
@@ -58,7 +55,7 @@ class FriendsViewController: UsersViewController {
         Twitter.sharedInstance().APIClient.listFriends(
             progress: { usersLoaded in
                 self.viewTitle = "Loading friends..."
-                let followersCount = self.rawUser["friends_count"] as Float
+                let followersCount = Float(self.user.friendsCount)
                 self.setProgress(followersCount, total: Float(usersLoaded))
             },
             completion: { usersResult in

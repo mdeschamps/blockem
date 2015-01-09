@@ -35,8 +35,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="4wc-Vx-qcI">
-                            <rect key="frame" x="0.0" y="64" width="600" height="2"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" id="4wc-Vx-qcI" customClass="UIThickProgressView" customModule="blockem" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="130" width="600" height="2.5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </progressView>
                         <prototypes>
@@ -100,8 +100,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="UaE-8z-ZUf">
-                            <rect key="frame" x="0.0" y="64" width="600" height="2"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" id="UaE-8z-ZUf" customClass="UIThickProgressView" customModule="blockem" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="130" width="600" height="2.5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </progressView>
                         <prototypes>
@@ -147,8 +147,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ep6-I7-ycx">
-                                <rect key="frame" x="535" y="100" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ep6-I7-ycx">
+                                <rect key="frame" x="535" y="99" width="51" height="31"/>
+                                <connections>
+                                    <action selector="profileImageToggleChanged:" destination="cTh-qd-UI3" eventType="valueChanged" id="sHv-Wg-NIr"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="No profile image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxG-re-gmH">
                                 <rect key="frame" x="16" y="105" width="511" height="21"/>
@@ -156,14 +159,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Followers Count" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mn7-6N-Tic">
-                                <rect key="frame" x="16" y="176" width="511" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Followers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mn7-6N-Tic">
+                                <rect key="frame" x="16" y="175" width="511" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="5" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="dDy-t5-TNp">
-                                <rect key="frame" x="14" y="210" width="572" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="5" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="dDy-t5-TNp">
+                                <rect key="frame" x="14" y="211" width="572" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="OZK-Cv-6iO"/>
                                 </constraints>
@@ -176,7 +179,7 @@
                                     <action selector="followersCountChanged:" destination="cTh-qd-UI3" eventType="valueChanged" id="w41-TF-JKx"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Friends Count" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHs-f8-Usb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Friends" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHs-f8-Usb">
                                 <rect key="frame" x="16" y="291" width="502" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -192,7 +195,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUx-k4-zcB">
-                                <rect key="frame" x="535" y="289" width="49" height="21"/>
+                                <rect key="frame" x="535" y="289" width="49" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="165-3c-Gpd"/>
                                 </constraints>
@@ -200,8 +203,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="5" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="tG9-dU-VbZ">
-                                <rect key="frame" x="14" y="326" width="572" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="5" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="tG9-dU-VbZ">
+                                <rect key="frame" x="14" y="325" width="572" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="Xg2-zR-pti"/>
                                 </constraints>
@@ -214,16 +217,48 @@
                                     <action selector="friendsCountChanged:" destination="cTh-qd-UI3" eventType="valueChanged" id="wOp-k8-D6V"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tweets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lY-nh-Min">
+                                <rect key="frame" x="16" y="406" width="511" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6U-yE-0l4">
+                                <rect key="frame" x="535" y="407" width="49" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="MId-JY-czu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="dxe-Ui-yWI">
+                                <rect key="frame" x="14" y="443" width="572" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="568" id="3Zs-7A-DDT"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3Zs-7A-DDT"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tweetsCountChanged:" destination="cTh-qd-UI3" eventType="valueChanged" id="Q6P-Qx-YnT"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tG9-dU-VbZ" firstAttribute="top" secondItem="NHs-f8-Usb" secondAttribute="bottom" constant="15" id="4B8-XB-LWr"/>
+                            <constraint firstItem="7lY-nh-Min" firstAttribute="leading" secondItem="WGW-YX-HkW" secondAttribute="leadingMargin" id="5wM-5i-d9Y"/>
+                            <constraint firstItem="Y6U-yE-0l4" firstAttribute="leading" secondItem="7lY-nh-Min" secondAttribute="trailing" constant="15" id="6Ky-1C-05a"/>
                             <constraint firstItem="pxG-re-gmH" firstAttribute="top" secondItem="Ezc-Ml-v3f" secondAttribute="bottom" constant="41" id="8Xb-1k-enz"/>
                             <constraint firstItem="dDy-t5-TNp" firstAttribute="top" secondItem="ep6-I7-ycx" secondAttribute="bottom" constant="20" id="8d6-DL-5eF"/>
                             <constraint firstItem="ep6-I7-ycx" firstAttribute="leading" secondItem="pxG-re-gmH" secondAttribute="trailing" constant="15" id="9U6-P6-fHZ"/>
                             <constraint firstItem="dDy-t5-TNp" firstAttribute="top" secondItem="Mn7-6N-Tic" secondAttribute="top" constant="-4" id="9Vk-HB-QD7"/>
                             <constraint firstItem="NHs-f8-Usb" firstAttribute="leading" secondItem="WGW-YX-HkW" secondAttribute="leadingMargin" id="AQi-Lq-wZ5"/>
                             <constraint firstItem="dDy-t5-TNp" firstAttribute="top" secondItem="Mn7-6N-Tic" secondAttribute="bottom" constant="15" id="AuZ-EZ-myA"/>
+                            <constraint firstItem="dxe-Ui-yWI" firstAttribute="leading" secondItem="WGW-YX-HkW" secondAttribute="leadingMargin" id="BUG-9B-uD1"/>
                             <constraint firstItem="Mn7-6N-Tic" firstAttribute="top" secondItem="pxG-re-gmH" secondAttribute="bottom" constant="50" id="FLG-9T-WUg"/>
                             <constraint firstItem="NHs-f8-Usb" firstAttribute="top" secondItem="Mn7-6N-Tic" secondAttribute="bottom" constant="30" id="GPY-4m-ZQa"/>
                             <constraint firstItem="Atr-JL-Dl9" firstAttribute="leading" secondItem="Mn7-6N-Tic" secondAttribute="trailing" constant="15" id="GZl-5m-AWX"/>
@@ -236,18 +271,23 @@
                             <constraint firstItem="tG9-dU-VbZ" firstAttribute="leading" secondItem="WGW-YX-HkW" secondAttribute="leadingMargin" id="WXt-bS-cw0"/>
                             <constraint firstItem="NHs-f8-Usb" firstAttribute="top" secondItem="dDy-t5-TNp" secondAttribute="bottom" constant="50" id="YgA-30-Bu7"/>
                             <constraint firstItem="Mn7-6N-Tic" firstAttribute="leading" secondItem="WGW-YX-HkW" secondAttribute="leadingMargin" id="Yi0-G6-2dk"/>
+                            <constraint firstItem="7lY-nh-Min" firstAttribute="top" secondItem="tG9-dU-VbZ" secondAttribute="bottom" constant="50" id="Znd-Ti-6R0"/>
                             <constraint firstItem="Atr-JL-Dl9" firstAttribute="trailing" secondItem="WGW-YX-HkW" secondAttribute="trailingMargin" id="Zwo-We-uFe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dDy-t5-TNp" secondAttribute="trailing" id="b93-TZ-skh"/>
                             <constraint firstItem="dDy-t5-TNp" firstAttribute="leading" secondItem="Mn7-6N-Tic" secondAttribute="trailing" constant="8" id="cJj-Pm-Xo4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y6U-yE-0l4" secondAttribute="trailing" id="cY3-u3-Hvi"/>
                             <constraint firstItem="aUx-k4-zcB" firstAttribute="trailing" secondItem="WGW-YX-HkW" secondAttribute="trailingMargin" id="dGV-rw-w7Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dxe-Ui-yWI" secondAttribute="trailing" id="dre-mp-A7b"/>
                             <constraint firstItem="aUx-k4-zcB" firstAttribute="top" secondItem="NHs-f8-Usb" secondAttribute="top" id="f2d-Qc-hXo"/>
                             <constraint firstItem="NHs-f8-Usb" firstAttribute="leading" secondItem="WGW-YX-HkW" secondAttribute="leadingMargin" id="fnv-jD-0x6"/>
                             <constraint firstItem="Atr-JL-Dl9" firstAttribute="leading" secondItem="Mn7-6N-Tic" secondAttribute="trailing" constant="15" id="gVC-ut-nUI"/>
                             <constraint firstItem="dDy-t5-TNp" firstAttribute="top" secondItem="Atr-JL-Dl9" secondAttribute="top" constant="-4" id="gzS-WA-r5H"/>
                             <constraint firstItem="aUx-k4-zcB" firstAttribute="leading" secondItem="WGW-YX-HkW" secondAttribute="leadingMargin" constant="526" id="iGD-xk-F7b"/>
+                            <constraint firstItem="7lY-nh-Min" firstAttribute="top" secondItem="Y6U-yE-0l4" secondAttribute="top" id="iIX-zx-CdG"/>
                             <constraint firstItem="tG9-dU-VbZ" firstAttribute="top" secondItem="NHs-f8-Usb" secondAttribute="top" constant="-4" id="kKd-4D-UDV"/>
                             <constraint firstItem="tG9-dU-VbZ" firstAttribute="leading" secondItem="NHs-f8-Usb" secondAttribute="trailing" constant="8" id="kNc-cz-LBZ"/>
                             <constraint firstItem="dDy-t5-TNp" firstAttribute="leading" secondItem="WGW-YX-HkW" secondAttribute="leadingMargin" id="kks-ln-trz"/>
+                            <constraint firstItem="dxe-Ui-yWI" firstAttribute="top" secondItem="7lY-nh-Min" secondAttribute="bottom" constant="15" id="mUk-qW-kRc"/>
                             <constraint firstItem="Atr-JL-Dl9" firstAttribute="top" secondItem="Mn7-6N-Tic" secondAttribute="top" constant="1" id="mhI-XD-HBq"/>
                             <constraint firstItem="tG9-dU-VbZ" firstAttribute="trailing" secondItem="WGW-YX-HkW" secondAttribute="trailingMargin" id="n9h-H3-qmA"/>
                             <constraint firstItem="Mn7-6N-Tic" firstAttribute="top" secondItem="pxG-re-gmH" secondAttribute="bottom" constant="30" id="nw3-eG-13Z"/>
@@ -292,17 +332,122 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="NS4-MJ-nJF">
+                        <barButtonItem key="rightBarButtonItem" title="Preview" id="Eui-D3-fdh">
+                            <connections>
+                                <segue destination="RLH-5O-um2" kind="show" id="MLZ-TO-2PR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="followersCount" destination="Atr-JL-Dl9" id="pU8-cu-7uO"/>
                         <outlet property="followersSlider" destination="dDy-t5-TNp" id="PtJ-fT-pYE"/>
                         <outlet property="friendsCount" destination="aUx-k4-zcB" id="OHT-7i-De8"/>
                         <outlet property="friendsSlider" destination="tG9-dU-VbZ" id="bAj-IG-Dge"/>
                         <outlet property="profileImageToggle" destination="ep6-I7-ycx" id="JIy-4T-MiF"/>
+                        <outlet property="tweetsCount" destination="Y6U-yE-0l4" id="sun-oS-yvc"/>
+                        <outlet property="tweetsSlider" destination="dxe-Ui-yWI" id="heR-Tv-CY8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAu-Ef-ahR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3137" y="375"/>
+        </scene>
+        <!--Bots View Controller-->
+        <scene sceneID="dk5-MQ-iLh">
+            <objects>
+                <tableViewController storyboardIdentifier="BotsViewController" id="RLH-5O-um2" customClass="BotsViewController" customModule="blockem" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bl7-TL-RNI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" id="A5v-lG-99L" customClass="UIThickProgressView" customModule="blockem" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="130" width="600" height="2.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </progressView>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="M78-6N-Sfd">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M78-6N-Sfd" id="WpC-I0-hU4">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RLH-5O-um2" id="0E3-g1-C63"/>
+                            <outlet property="delegate" destination="RLH-5O-um2" id="a4k-rt-6fY"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="YCw-YQ-ocZ">
+                        <barButtonItem key="rightBarButtonItem" title="BLOCK'EM!" id="iuy-ep-pso">
+                            <connections>
+                                <segue destination="tu9-VU-pHa" kind="show" id="GHp-xj-nGv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nextButton" destination="iuy-ep-pso" id="N02-kF-Uyh"/>
+                        <outlet property="progressBar" destination="A5v-lG-99L" id="UBR-O4-H8G"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAA-5U-jmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3852" y="375"/>
+        </scene>
+        <!--Block Bots View Controller-->
+        <scene sceneID="6T5-P7-4OC">
+            <objects>
+                <viewController storyboardIdentifier="BlockBotsViewController" id="tu9-VU-pHa" customClass="BlockBotsViewController" customModule="blockem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V1t-Mb-PJM"/>
+                        <viewControllerLayoutGuide type="bottom" id="4nG-PG-8X0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wbt-wO-z0Q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progressViewStyle="bar" progress="0.01" translatesAutoresizingMaskIntoConstraints="NO" id="erg-yz-ULD">
+                                <rect key="frame" x="55" y="299" width="453" height="2.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="zXJ-CJ-S6h"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Starting ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOU-9w-tiS">
+                                <rect key="frame" x="120" y="333" width="365" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qOU-9w-tiS" firstAttribute="top" secondItem="erg-yz-ULD" secondAttribute="bottom" constant="32.5" id="Da2-rO-Lyf"/>
+                            <constraint firstItem="erg-yz-ULD" firstAttribute="leading" secondItem="Wbt-wO-z0Q" secondAttribute="leadingMargin" constant="40" id="FXm-wE-2yW"/>
+                            <constraint firstAttribute="centerY" secondItem="erg-yz-ULD" secondAttribute="centerY" id="VGg-82-mKf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="erg-yz-ULD" secondAttribute="trailing" constant="40" id="Vkj-yd-syM"/>
+                            <constraint firstAttribute="centerX" secondItem="erg-yz-ULD" secondAttribute="centerX" id="cBF-Wn-FvJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qOU-9w-tiS" secondAttribute="trailing" constant="100" id="pS7-rT-yP3"/>
+                            <constraint firstItem="qOU-9w-tiS" firstAttribute="leading" secondItem="Wbt-wO-z0Q" secondAttribute="leadingMargin" constant="100" id="sbc-1W-kT7"/>
+                            <constraint firstItem="erg-yz-ULD" firstAttribute="top" secondItem="V1t-Mb-PJM" secondAttribute="bottom" constant="241" id="unG-bc-h9e"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FXm-wE-2yW"/>
+                                <exclude reference="Vkj-yd-syM"/>
+                                <exclude reference="unG-bc-h9e"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="progressBar" destination="erg-yz-ULD" id="6hu-CP-Q2c"/>
+                        <outlet property="progressLabel" destination="qOU-9w-tiS" id="ytE-t8-LdL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="noC-oE-FHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4613" y="375"/>
         </scene>
     </scenes>
 </document>

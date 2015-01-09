@@ -9,6 +9,7 @@
 import UIKit
 import Fabric
 import TwitterKit
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {        
         Twitter.sharedInstance().startWithConsumerKey("IQKbtAYlXLripLGPWd0HUA",
             consumerSecret: "GgDYlkSvaPxGxC4X8liwpUoqKwwr3lCADbz8A7ADU")
-        Fabric.with([Twitter.sharedInstance()])
+        Fabric.with([Twitter.sharedInstance(), Crashlytics()])
 
         if Twitter.sharedInstance().session() != nil {
            showFriendsViewController()

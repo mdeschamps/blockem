@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C02AB981A5F560200FF988E /* UsersBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C02AB971A5F560200FF988E /* UsersBlock.swift */; };
+		6C02AB9A1A5F675700FF988E /* BlockBotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C02AB991A5F675700FF988E /* BlockBotsViewController.swift */; };
 		6C509C9C1A5CCB030030738B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C509C9B1A5CCB030030738B /* AppDelegate.swift */; };
 		6C509CA11A5CCB030030738B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C509C9F1A5CCB030030738B /* Main.storyboard */; };
 		6C509CA31A5CCB030030738B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C509CA21A5CCB030030738B /* Images.xcassets */; };
@@ -18,6 +20,9 @@
 		6C509CC31A5CCB7B0030738B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C509CC21A5CCB7B0030738B /* LoginViewController.swift */; };
 		6C509CC71A5CD3350030738B /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C509CC61A5CD3350030738B /* FriendsViewController.swift */; };
 		6C509CCB1A5D0CAF0030738B /* UsersSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C509CCA1A5D0CAF0030738B /* UsersSearch.swift */; };
+		6C5220CE1A5F191300ED5346 /* TWTRUserExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5220CD1A5F191300ED5346 /* TWTRUserExtensions.swift */; };
+		6C6303B31A5F2BFA001FDB21 /* BotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6303B21A5F2BFA001FDB21 /* BotsViewController.swift */; };
+		6C6303B51A5F330B001FDB21 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6303B41A5F330B001FDB21 /* Crashlytics.framework */; };
 		6C95BA491A5E3C9700941694 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C95BA481A5E3C9700941694 /* UsersViewController.swift */; };
 		6C95BA4B1A5E3FCF00941694 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C95BA4A1A5E3FCF00941694 /* FollowersViewController.swift */; };
 		6C95BA4D1A5E5AF900941694 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C95BA4C1A5E5AF900941694 /* FiltersViewController.swift */; };
@@ -36,13 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6C509C961A5CCB030030738B /* blockem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blockem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C02AB971A5F560200FF988E /* UsersBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersBlock.swift; sourceTree = "<group>"; };
+		6C02AB991A5F675700FF988E /* BlockBotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockBotsViewController.swift; sourceTree = "<group>"; };
+		6C509C961A5CCB030030738B /* BotTerminator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BotTerminator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C509C9A1A5CCB030030738B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C509C9B1A5CCB030030738B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C509CA01A5CCB030030738B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C509CA21A5CCB030030738B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6C509CA51A5CCB030030738B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		6C509CAB1A5CCB030030738B /* blockemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blockemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C509CAB1A5CCB030030738B /* BotTerminatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BotTerminatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C509CB01A5CCB030030738B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C509CB11A5CCB030030738B /* blockemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blockemTests.swift; sourceTree = "<group>"; };
 		6C509CBC1A5CCB2D0030738B /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
@@ -51,6 +58,9 @@
 		6C509CC21A5CCB7B0030738B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6C509CC61A5CD3350030738B /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		6C509CCA1A5D0CAF0030738B /* UsersSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersSearch.swift; sourceTree = "<group>"; };
+		6C5220CD1A5F191300ED5346 /* TWTRUserExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWTRUserExtensions.swift; sourceTree = "<group>"; };
+		6C6303B21A5F2BFA001FDB21 /* BotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotsViewController.swift; sourceTree = "<group>"; };
+		6C6303B41A5F330B001FDB21 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		6C95BA481A5E3C9700941694 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		6C95BA4A1A5E3FCF00941694 /* FollowersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		6C95BA4C1A5E5AF900941694 /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C509CBF1A5CCB2D0030738B /* TwitterKit.framework in Frameworks */,
+				6C6303B51A5F330B001FDB21 /* Crashlytics.framework in Frameworks */,
 				6C509CC11A5CCB2D0030738B /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +92,7 @@
 		6C509C8D1A5CCB030030738B = {
 			isa = PBXGroup;
 			children = (
+				6C6303B41A5F330B001FDB21 /* Crashlytics.framework */,
 				6C509CBC1A5CCB2D0030738B /* TwitterKit.framework */,
 				6C509CBD1A5CCB2D0030738B /* TwitterKitResources.bundle */,
 				6C509CBE1A5CCB2D0030738B /* Fabric.framework */,
@@ -93,8 +105,8 @@
 		6C509C971A5CCB030030738B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6C509C961A5CCB030030738B /* blockem.app */,
-				6C509CAB1A5CCB030030738B /* blockemTests.xctest */,
+				6C509C961A5CCB030030738B /* BotTerminator.app */,
+				6C509CAB1A5CCB030030738B /* BotTerminatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,18 +115,22 @@
 			isa = PBXGroup;
 			children = (
 				6C509C9B1A5CCB030030738B /* AppDelegate.swift */,
-				6C509CC61A5CD3350030738B /* FriendsViewController.swift */,
+				6C02AB991A5F675700FF988E /* BlockBotsViewController.swift */,
+				6C6303B21A5F2BFA001FDB21 /* BotsViewController.swift */,
+				6C95BA4C1A5E5AF900941694 /* FiltersViewController.swift */,
 				6C95BA4A1A5E3FCF00941694 /* FollowersViewController.swift */,
-				6C95BA481A5E3C9700941694 /* UsersViewController.swift */,
+				6C509CC61A5CD3350030738B /* FriendsViewController.swift */,
 				6C509CA21A5CCB030030738B /* Images.xcassets */,
 				6C509CA41A5CCB030030738B /* LaunchScreen.xib */,
 				6C509CC21A5CCB7B0030738B /* LoginViewController.swift */,
 				6C509C9F1A5CCB030030738B /* Main.storyboard */,
-				6C95BA4C1A5E5AF900941694 /* FiltersViewController.swift */,
 				6C509C991A5CCB030030738B /* Supporting Files */,
+				6C5220CD1A5F191300ED5346 /* TWTRUserExtensions.swift */,
 				6CAD565F1A5DC6D50047E44F /* TWTRUserTableViewCell.swift */,
 				6CAD565D1A5DC43C0047E44F /* TWTRUserTableViewCell.xib */,
+				6C02AB971A5F560200FF988E /* UsersBlock.swift */,
 				6C509CCA1A5D0CAF0030738B /* UsersSearch.swift */,
+				6C95BA481A5E3C9700941694 /* UsersViewController.swift */,
 			);
 			path = blockem;
 			sourceTree = "<group>";
@@ -147,9 +163,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6C509C951A5CCB030030738B /* blockem */ = {
+		6C509C951A5CCB030030738B /* BotTerminator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C509CB51A5CCB030030738B /* Build configuration list for PBXNativeTarget "blockem" */;
+			buildConfigurationList = 6C509CB51A5CCB030030738B /* Build configuration list for PBXNativeTarget "BotTerminator" */;
 			buildPhases = (
 				6C509C921A5CCB030030738B /* Sources */,
 				6C509C931A5CCB030030738B /* Frameworks */,
@@ -160,14 +176,14 @@
 			);
 			dependencies = (
 			);
-			name = blockem;
+			name = BotTerminator;
 			productName = blockem;
-			productReference = 6C509C961A5CCB030030738B /* blockem.app */;
+			productReference = 6C509C961A5CCB030030738B /* BotTerminator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6C509CAA1A5CCB030030738B /* blockemTests */ = {
+		6C509CAA1A5CCB030030738B /* BotTerminatorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C509CB81A5CCB030030738B /* Build configuration list for PBXNativeTarget "blockemTests" */;
+			buildConfigurationList = 6C509CB81A5CCB030030738B /* Build configuration list for PBXNativeTarget "BotTerminatorTests" */;
 			buildPhases = (
 				6C509CA71A5CCB030030738B /* Sources */,
 				6C509CA81A5CCB030030738B /* Frameworks */,
@@ -178,9 +194,9 @@
 			dependencies = (
 				6C509CAD1A5CCB030030738B /* PBXTargetDependency */,
 			);
-			name = blockemTests;
+			name = BotTerminatorTests;
 			productName = blockemTests;
-			productReference = 6C509CAB1A5CCB030030738B /* blockemTests.xctest */;
+			productReference = 6C509CAB1A5CCB030030738B /* BotTerminatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -194,6 +210,7 @@
 				TargetAttributes = {
 					6C509C951A5CCB030030738B = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = FCAH69RY2W;
 					};
 					6C509CAA1A5CCB030030738B = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -201,7 +218,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6C509C911A5CCB030030738B /* Build configuration list for PBXProject "blockem" */;
+			buildConfigurationList = 6C509C911A5CCB030030738B /* Build configuration list for PBXProject "BotTerminator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -214,8 +231,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6C509C951A5CCB030030738B /* blockem */,
-				6C509CAA1A5CCB030030738B /* blockemTests */,
+				6C509C951A5CCB030030738B /* BotTerminator */,
+				6C509CAA1A5CCB030030738B /* BotTerminatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -264,12 +281,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C509CCB1A5D0CAF0030738B /* UsersSearch.swift in Sources */,
+				6C02AB981A5F560200FF988E /* UsersBlock.swift in Sources */,
+				6C02AB9A1A5F675700FF988E /* BlockBotsViewController.swift in Sources */,
 				6C95BA491A5E3C9700941694 /* UsersViewController.swift in Sources */,
 				6C95BA4B1A5E3FCF00941694 /* FollowersViewController.swift in Sources */,
 				6C509CC31A5CCB7B0030738B /* LoginViewController.swift in Sources */,
 				6C509CC71A5CD3350030738B /* FriendsViewController.swift in Sources */,
+				6C5220CE1A5F191300ED5346 /* TWTRUserExtensions.swift in Sources */,
 				6C509C9C1A5CCB030030738B /* AppDelegate.swift in Sources */,
 				6C95BA4D1A5E5AF900941694 /* FiltersViewController.swift in Sources */,
+				6C6303B31A5F2BFA001FDB21 /* BotsViewController.swift in Sources */,
 				6CAD56601A5DC6D50047E44F /* TWTRUserTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +308,7 @@
 /* Begin PBXTargetDependency section */
 		6C509CAD1A5CCB030030738B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6C509C951A5CCB030030738B /* blockem */;
+			target = 6C509C951A5CCB030030738B /* BotTerminator */;
 			targetProxy = 6C509CAC1A5CCB030030738B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -393,13 +414,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = blockem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BotTerminator;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -407,13 +432,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = blockem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BotTerminator;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -431,7 +459,7 @@
 				);
 				INFOPLIST_FILE = blockemTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BotTerminatorTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blockem.app/blockem";
 			};
 			name = Debug;
@@ -446,7 +474,7 @@
 				);
 				INFOPLIST_FILE = blockemTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BotTerminatorTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blockem.app/blockem";
 			};
 			name = Release;
@@ -454,7 +482,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6C509C911A5CCB030030738B /* Build configuration list for PBXProject "blockem" */ = {
+		6C509C911A5CCB030030738B /* Build configuration list for PBXProject "BotTerminator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C509CB31A5CCB030030738B /* Debug */,
@@ -463,7 +491,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C509CB51A5CCB030030738B /* Build configuration list for PBXNativeTarget "blockem" */ = {
+		6C509CB51A5CCB030030738B /* Build configuration list for PBXNativeTarget "BotTerminator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C509CB61A5CCB030030738B /* Debug */,
@@ -472,7 +500,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C509CB81A5CCB030030738B /* Build configuration list for PBXNativeTarget "blockemTests" */ = {
+		6C509CB81A5CCB030030738B /* Build configuration list for PBXNativeTarget "BotTerminatorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C509CB91A5CCB030030738B /* Debug */,

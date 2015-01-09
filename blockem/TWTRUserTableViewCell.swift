@@ -14,11 +14,14 @@ class TWTRUserTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var screenName: UILabel!
     @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var reasons: UILabel!
     
-    private var user: TWTRUser = TWTRUser() {
+    private var user: TWTRExtendedUser = TWTRExtendedUser() {
         didSet {
             name?.text = user.name
             screenName?.text = user.formattedScreenName
+            reasons?.text = user.reasons.isEmpty ? "" : ", ".join(user.reasons)
+            
             // Set image.
             NSURLConnection.sendAsynchronousRequest(
                 NSURLRequest(URL: NSURL(string: user.profileImageURL)!),
@@ -34,7 +37,7 @@ class TWTRUserTableViewCell: UITableViewCell {
         }
     }
     
-    func configureWithUser(user: TWTRUser) {
+    func configureWithUser(user: TWTRExtendedUser) {
         self.user = user
     }
     
