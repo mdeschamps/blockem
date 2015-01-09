@@ -8,7 +8,7 @@
         <!--Login View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="vXZ-lx-hvc" customClass="LoginViewController" customModule="blockem" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="vXZ-lx-hvc" customClass="LoginViewController" customModule="BotTerminator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -16,10 +16,42 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bot Terminator 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GN-iz-T6O">
+                                <rect key="frame" x="112" y="194" width="377" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Robot-from-The-Terminator-010" translatesAutoresizingMaskIntoConstraints="NO" id="5BD-VK-Tu3">
+                                <rect key="frame" x="243" y="65" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="hG5-Sr-SLM"/>
+                                    <constraint firstAttribute="height" constant="150" id="slC-aL-MfB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4GN-iz-T6O" firstAttribute="top" secondItem="5BD-VK-Tu3" secondAttribute="bottom" constant="15" id="Gdb-mr-b4x"/>
+                            <constraint firstAttribute="centerX" secondItem="4GN-iz-T6O" secondAttribute="centerX" id="PfQ-QH-KGF"/>
+                            <constraint firstItem="5BD-VK-Tu3" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="45" id="Zwo-8p-tai"/>
+                            <constraint firstItem="4GN-iz-T6O" firstAttribute="top" secondItem="5BD-VK-Tu3" secondAttribute="bottom" constant="29" id="fgz-UQ-IYW"/>
+                            <constraint firstAttribute="centerY" secondItem="5BD-VK-Tu3" secondAttribute="centerY" constant="216" id="kW0-kM-VSh"/>
+                            <constraint firstAttribute="centerX" secondItem="5BD-VK-Tu3" secondAttribute="centerX" id="n5b-Ce-2qo"/>
+                            <constraint firstItem="4GN-iz-T6O" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="150" id="uTd-nG-82D"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Gdb-mr-b4x"/>
+                                <exclude reference="uTd-nG-82D"/>
+                                <exclude reference="kW0-kM-VSh"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="FlM-vg-OtM"/>
                     <connections>
+                        <outlet property="appImage" destination="5BD-VK-Tu3" id="tBi-AW-VY5"/>
                         <segue destination="DNh-3d-Ldf" kind="show" identifier="ShowFriendsSegue" id="6Jw-VS-DAv"/>
                     </connections>
                 </viewController>
@@ -30,12 +62,12 @@
         <!--Friends View Controller-->
         <scene sceneID="tan-dg-tgS">
             <objects>
-                <tableViewController storyboardIdentifier="FriendsViewController" id="2V5-FW-qxe" customClass="FriendsViewController" customModule="blockem" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FriendsViewController" id="2V5-FW-qxe" customClass="FriendsViewController" customModule="BotTerminator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JDl-NQ-1ub">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" id="4wc-Vx-qcI" customClass="UIThickProgressView" customModule="blockem" customModuleProvider="target">
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" id="4wc-Vx-qcI" customClass="UIThickProgressView" customModule="BotTerminator" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="130" width="600" height="2.5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </progressView>
@@ -95,12 +127,12 @@
         <!--Followers View Controller-->
         <scene sceneID="Lyf-G6-zPd">
             <objects>
-                <tableViewController storyboardIdentifier="FollowserViewController" id="jtP-wh-A7X" customClass="FollowersViewController" customModule="blockem" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FollowserViewController" id="jtP-wh-A7X" customClass="FollowersViewController" customModule="BotTerminator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5Qf-kp-B1F">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" id="UaE-8z-ZUf" customClass="UIThickProgressView" customModule="blockem" customModuleProvider="target">
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" id="UaE-8z-ZUf" customClass="UIThickProgressView" customModule="BotTerminator" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="130" width="600" height="2.5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </progressView>
@@ -138,7 +170,7 @@
         <!--Filters-->
         <scene sceneID="NMe-fo-n2T">
             <objects>
-                <viewController storyboardIdentifier="FiltersViewController" title="Filters" id="cTh-qd-UI3" customClass="FiltersViewController" customModule="blockem" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FiltersViewController" title="Filters" id="cTh-qd-UI3" customClass="FiltersViewController" customModule="BotTerminator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ezc-Ml-v3f"/>
                         <viewControllerLayoutGuide type="bottom" id="Kc9-mH-oJb"/>
@@ -356,12 +388,12 @@
         <!--Bots View Controller-->
         <scene sceneID="dk5-MQ-iLh">
             <objects>
-                <tableViewController storyboardIdentifier="BotsViewController" id="RLH-5O-um2" customClass="BotsViewController" customModule="blockem" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BotsViewController" id="RLH-5O-um2" customClass="BotsViewController" customModule="BotTerminator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bl7-TL-RNI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" id="A5v-lG-99L" customClass="UIThickProgressView" customModule="blockem" customModuleProvider="target">
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" id="A5v-lG-99L" customClass="UIThickProgressView" customModule="BotTerminator" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="130" width="600" height="2.5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </progressView>
@@ -399,7 +431,7 @@
         <!--Block Bots View Controller-->
         <scene sceneID="6T5-P7-4OC">
             <objects>
-                <viewController storyboardIdentifier="BlockBotsViewController" id="tu9-VU-pHa" customClass="BlockBotsViewController" customModule="blockem" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlockBotsViewController" id="tu9-VU-pHa" customClass="BlockBotsViewController" customModule="BotTerminator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V1t-Mb-PJM"/>
                         <viewControllerLayoutGuide type="bottom" id="4nG-PG-8X0"/>
@@ -450,4 +482,7 @@
             <point key="canvasLocation" x="4613" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Robot-from-The-Terminator-010" width="368" height="369"/>
+    </resources>
 </document>

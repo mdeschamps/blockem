@@ -27,14 +27,14 @@ extension TWTRAPIClient {
         var request = Twitter.sharedInstance().APIClient.URLRequestWithMethod("GET", URL: TwitterAPIVerifyCredentialsURL, parameters: Dictionary<String, String>(), error: &maybeError)
         
         if let error = maybeError {
-            completion(TWTRUser())
+            completion(TWTRExtendedUser())
             return
         }
         
         // Perform the Twitter API request.
         Twitter.sharedInstance().APIClient.sendTwitterRequest(request, completion: { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             if error != nil {
-                completion(TWTRUser())
+                completion(TWTRExtendedUser())
                 return
             }
             let jsonDictionary = JSONFromData(data)

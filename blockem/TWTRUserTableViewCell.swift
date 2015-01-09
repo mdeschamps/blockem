@@ -30,8 +30,8 @@ class TWTRUserTableViewCell: UITableViewCell {
                     (response: NSURLResponse!, data: NSData!, err: NSError!) -> Void in
                     let image = UIImage(data: data)
                     self.avatar.image = image
-                    self.avatar.layer.cornerRadius = 5;
-                    self.avatar.clipsToBounds = true;
+                    self.avatar.layer.cornerRadius = 5
+                    self.avatar.clipsToBounds = true
                 }
             )
         }

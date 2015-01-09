@@ -13,7 +13,6 @@
 		6C509CA11A5CCB030030738B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C509C9F1A5CCB030030738B /* Main.storyboard */; };
 		6C509CA31A5CCB030030738B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C509CA21A5CCB030030738B /* Images.xcassets */; };
 		6C509CA61A5CCB030030738B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C509CA41A5CCB030030738B /* LaunchScreen.xib */; };
-		6C509CB21A5CCB030030738B /* blockemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C509CB11A5CCB030030738B /* blockemTests.swift */; };
 		6C509CBF1A5CCB2D0030738B /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C509CBC1A5CCB2D0030738B /* TwitterKit.framework */; };
 		6C509CC01A5CCB2D0030738B /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6C509CBD1A5CCB2D0030738B /* TwitterKitResources.bundle */; };
 		6C509CC11A5CCB2D0030738B /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C509CBE1A5CCB2D0030738B /* Fabric.framework */; };
@@ -30,16 +29,6 @@
 		6CAD56601A5DC6D50047E44F /* TWTRUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD565F1A5DC6D50047E44F /* TWTRUserTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		6C509CAC1A5CCB030030738B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C509C8E1A5CCB030030738B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6C509C951A5CCB030030738B;
-			remoteInfo = blockem;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		6C02AB971A5F560200FF988E /* UsersBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersBlock.swift; sourceTree = "<group>"; };
 		6C02AB991A5F675700FF988E /* BlockBotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockBotsViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +38,6 @@
 		6C509CA01A5CCB030030738B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C509CA21A5CCB030030738B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6C509CA51A5CCB030030738B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		6C509CAB1A5CCB030030738B /* BotTerminatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BotTerminatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C509CB01A5CCB030030738B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C509CB11A5CCB030030738B /* blockemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blockemTests.swift; sourceTree = "<group>"; };
 		6C509CBC1A5CCB2D0030738B /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
@@ -79,13 +67,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C509CA81A5CCB030030738B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -106,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				6C509C961A5CCB030030738B /* BotTerminator.app */,
-				6C509CAB1A5CCB030030738B /* BotTerminatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,24 +161,6 @@
 			productReference = 6C509C961A5CCB030030738B /* BotTerminator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6C509CAA1A5CCB030030738B /* BotTerminatorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6C509CB81A5CCB030030738B /* Build configuration list for PBXNativeTarget "BotTerminatorTests" */;
-			buildPhases = (
-				6C509CA71A5CCB030030738B /* Sources */,
-				6C509CA81A5CCB030030738B /* Frameworks */,
-				6C509CA91A5CCB030030738B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6C509CAD1A5CCB030030738B /* PBXTargetDependency */,
-			);
-			name = BotTerminatorTests;
-			productName = blockemTests;
-			productReference = 6C509CAB1A5CCB030030738B /* BotTerminatorTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -211,10 +173,6 @@
 					6C509C951A5CCB030030738B = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = FCAH69RY2W;
-					};
-					6C509CAA1A5CCB030030738B = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 6C509C951A5CCB030030738B;
 					};
 				};
 			};
@@ -232,7 +190,6 @@
 			projectRoot = "";
 			targets = (
 				6C509C951A5CCB030030738B /* BotTerminator */,
-				6C509CAA1A5CCB030030738B /* BotTerminatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -247,13 +204,6 @@
 				6C509CA11A5CCB030030738B /* Main.storyboard in Resources */,
 				6C509CA61A5CCB030030738B /* LaunchScreen.xib in Resources */,
 				6C509CA31A5CCB030030738B /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6C509CA91A5CCB030030738B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,23 +245,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C509CA71A5CCB030030738B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6C509CB21A5CCB030030738B /* blockemTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6C509CAD1A5CCB030030738B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6C509C951A5CCB030030738B /* BotTerminator */;
-			targetProxy = 6C509CAC1A5CCB030030738B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6C509C9F1A5CCB030030738B /* Main.storyboard */ = {
@@ -445,40 +379,6 @@
 			};
 			name = Release;
 		};
-		6C509CB91A5CCB030030738B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = blockemTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = BotTerminatorTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blockem.app/blockem";
-			};
-			name = Debug;
-		};
-		6C509CBA1A5CCB030030738B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = blockemTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = BotTerminatorTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blockem.app/blockem";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -496,15 +396,6 @@
 			buildConfigurations = (
 				6C509CB61A5CCB030030738B /* Debug */,
 				6C509CB71A5CCB030030738B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6C509CB81A5CCB030030738B /* Build configuration list for PBXNativeTarget "BotTerminatorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6C509CB91A5CCB030030738B /* Debug */,
-				6C509CBA1A5CCB030030738B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

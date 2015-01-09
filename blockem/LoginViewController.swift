@@ -11,8 +11,16 @@ import TwitterKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var appImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.appImage.layer.cornerRadius = 75
+        self.appImage.clipsToBounds = true
+        self.appImage.layer.borderColor = UIColor.grayColor().CGColor
+        self.appImage.layer.borderWidth = 1
+          
         let logInButton = TWTRLogInButton(logInCompletion: {
             (session: TWTRSession!, error: NSError!) in
             self.showFriendsViewController()
@@ -38,15 +46,4 @@ class LoginViewController: UIViewController {
     func showFriendsViewController() {
         self.performSegueWithIdentifier("ShowFriendsSegue", sender: self)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
