@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" id="4wc-Vx-qcI" customClass="UIThickProgressView" customModule="BotTerminator" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="130" width="600" height="2.5"/>
+                            <rect key="frame" x="0.0" y="131" width="600" height="3"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </progressView>
                         <prototypes>
@@ -133,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" id="UaE-8z-ZUf" customClass="UIThickProgressView" customModule="BotTerminator" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="130" width="600" height="2.5"/>
+                            <rect key="frame" x="0.0" y="131" width="600" height="3"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </progressView>
                         <prototypes>
@@ -197,7 +197,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="5" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="dDy-t5-TNp">
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="5" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="dDy-t5-TNp">
                                 <rect key="frame" x="14" y="211" width="572" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="OZK-Cv-6iO"/>
@@ -255,7 +255,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6U-yE-0l4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6U-yE-0l4">
                                 <rect key="frame" x="535" y="407" width="49" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="MId-JY-czu"/>
@@ -264,7 +264,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="dxe-Ui-yWI">
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="dxe-Ui-yWI">
                                 <rect key="frame" x="14" y="443" width="572" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="568" id="3Zs-7A-DDT"/>
@@ -376,6 +376,7 @@
                         <outlet property="followersSlider" destination="dDy-t5-TNp" id="PtJ-fT-pYE"/>
                         <outlet property="friendsCount" destination="aUx-k4-zcB" id="OHT-7i-De8"/>
                         <outlet property="friendsSlider" destination="tG9-dU-VbZ" id="bAj-IG-Dge"/>
+                        <outlet property="previewButton" destination="Eui-D3-fdh" id="C7Z-GZ-496"/>
                         <outlet property="profileImageToggle" destination="ep6-I7-ycx" id="JIy-4T-MiF"/>
                         <outlet property="tweetsCount" destination="Y6U-yE-0l4" id="sun-oS-yvc"/>
                         <outlet property="tweetsSlider" destination="dxe-Ui-yWI" id="heR-Tv-CY8"/>
@@ -394,7 +395,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" id="A5v-lG-99L" customClass="UIThickProgressView" customModule="BotTerminator" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="130" width="600" height="2.5"/>
+                            <rect key="frame" x="0.0" y="131" width="600" height="3"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </progressView>
                         <prototypes>
@@ -412,7 +413,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="YCw-YQ-ocZ">
-                        <barButtonItem key="rightBarButtonItem" title="BLOCK'EM!" id="iuy-ep-pso">
+                        <barButtonItem key="rightBarButtonItem" title="TERMINATE" id="iuy-ep-pso">
                             <connections>
                                 <segue destination="tu9-VU-pHa" kind="show" id="GHp-xj-nGv"/>
                             </connections>
@@ -452,23 +453,37 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Terminating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4U-dS-ET1">
+                                <rect key="frame" x="279" y="232" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qOU-9w-tiS" firstAttribute="top" secondItem="erg-yz-ULD" secondAttribute="bottom" constant="32.5" id="Da2-rO-Lyf"/>
                             <constraint firstItem="erg-yz-ULD" firstAttribute="leading" secondItem="Wbt-wO-z0Q" secondAttribute="leadingMargin" constant="40" id="FXm-wE-2yW"/>
+                            <constraint firstItem="erg-yz-ULD" firstAttribute="top" secondItem="E4U-dS-ET1" secondAttribute="bottom" constant="46" id="NHF-wv-1sE"/>
                             <constraint firstAttribute="centerY" secondItem="erg-yz-ULD" secondAttribute="centerY" id="VGg-82-mKf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="erg-yz-ULD" secondAttribute="trailing" constant="40" id="Vkj-yd-syM"/>
+                            <constraint firstItem="E4U-dS-ET1" firstAttribute="leading" secondItem="Wbt-wO-z0Q" secondAttribute="leadingMargin" constant="263" id="ZJq-Fc-xBl"/>
+                            <constraint firstItem="erg-yz-ULD" firstAttribute="top" secondItem="E4U-dS-ET1" secondAttribute="bottom" constant="46" id="blY-Bd-p1v"/>
                             <constraint firstAttribute="centerX" secondItem="erg-yz-ULD" secondAttribute="centerX" id="cBF-Wn-FvJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E4U-dS-ET1" secondAttribute="trailing" constant="216" id="chX-3l-3xC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qOU-9w-tiS" secondAttribute="trailing" constant="100" id="pS7-rT-yP3"/>
                             <constraint firstItem="qOU-9w-tiS" firstAttribute="leading" secondItem="Wbt-wO-z0Q" secondAttribute="leadingMargin" constant="100" id="sbc-1W-kT7"/>
                             <constraint firstItem="erg-yz-ULD" firstAttribute="top" secondItem="V1t-Mb-PJM" secondAttribute="bottom" constant="241" id="unG-bc-h9e"/>
+                            <constraint firstAttribute="centerX" secondItem="E4U-dS-ET1" secondAttribute="centerX" id="uvD-fk-H2I"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="FXm-wE-2yW"/>
+                                <exclude reference="NHF-wv-1sE"/>
                                 <exclude reference="Vkj-yd-syM"/>
                                 <exclude reference="unG-bc-h9e"/>
+                                <exclude reference="ZJq-Fc-xBl"/>
+                                <exclude reference="chX-3l-3xC"/>
                             </mask>
                         </variation>
                     </view>

@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "listFriends(progress:completion:)"
+            landmarkName = "listFollowers(progress:completion:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -63,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "listFriends(progress:completion:)"
+            landmarkName = "listFollowers(progress:completion:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

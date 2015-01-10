@@ -14,7 +14,7 @@ enum UsersResult {
 }
 
 private let fetchBatchSize = 200
-private let maxUsers: Int? = 2000
+private let maxUsers: Int? = nil
 
 private let TwitterAPIFriendsURL = "https://api.twitter.com/1.1/friends/list.json?skip_status=true&include_user_entities=false"
 private let TwitterAPIFollowersURL = "https://api.twitter.com/1.1/followers/list.json?skip_status=true&include_user_entities=false"

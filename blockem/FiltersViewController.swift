@@ -18,7 +18,7 @@ class FiltersViewController: UIViewController {
     var followersIndex: [String:TWTRExtendedUser]!
     
     var filteringBots = false
-    var maxBlocks: Int? = 100
+    var maxBlocks: Int? = 5000
     
     @IBOutlet weak var profileImageToggle: UISwitch!
     @IBOutlet weak var followersCount: UILabel!
@@ -27,6 +27,7 @@ class FiltersViewController: UIViewController {
     @IBOutlet weak var friendsSlider: UISlider!
     @IBOutlet weak var tweetsCount: UILabel!
     @IBOutlet weak var tweetsSlider: UISlider!
+    @IBOutlet weak var previewButton: UIBarButtonItem!
     
     var viewTitle: String = "" {
         didSet {
@@ -72,7 +73,8 @@ class FiltersViewController: UIViewController {
             botsView.user = self.user
             
             var bots = self.filterBlockedFollowers()
-            if maxBlocks != nil {
+            
+            if bots.count > 0 && maxBlocks != nil {
                 botsView.users = Array(bots[0..<min(maxBlocks!, bots.count-1)])
             } else {
                 botsView.users = bots
@@ -100,15 +102,22 @@ class FiltersViewController: UIViewController {
         
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let bots = self.filterBlockedFollowers()
+            var bots: [TWTRExtendedUser]? = nil
+            if !self.filteringBots {
+                 bots = self.filterBlockedFollowers()
+            }
             
             dispatch_async(dispatch_get_main_queue()) {
-                self.viewTitle = String(format: "Bots: %i", bots.count)
+                if !self.filteringBots && bots != nil {
+                    self.viewTitle = String(format: "Bots: %i", bots!.count)
+                }
             }
         }
     }
     
     private func filterBlockedFollowers() -> [TWTRExtendedUser] {
+        objc_sync_enter(self)
+        
         var filteredFollowers = [] + followers
         var bots: [TWTRExtendedUser] = []
         
@@ -162,6 +171,8 @@ class FiltersViewController: UIViewController {
         // remove duplicates
         bots = uniq(bots)
         self.filteringBots = false
+        
+        objc_sync_exit(self)
         
         return bots
     }
